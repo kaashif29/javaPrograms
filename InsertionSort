@@ -1,0 +1,21 @@
+#Demonstration of insertion sort in java
+import java.util.Arrays;
+
+public class insertion_Sort {
+    public static void main(String[] args) {
+        int[] a= { 20, 35, -15, 7, 55, 1, -22 };
+        for(int firstUnsortedIndex = 1; firstUnsortedIndex<a.length; firstUnsortedIndex++){
+            int newElement = a[firstUnsortedIndex];
+
+            int i;
+
+            for(i=firstUnsortedIndex;i>0 ;i--){
+                if(a[i-1]>newElement)
+                    a[i]=a[i-1];
+            }
+            a[i]=newElement;
+        }
+        System.out.println(Arrays.toString(a));
+
+    }
+}
